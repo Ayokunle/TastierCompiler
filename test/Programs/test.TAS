@@ -1,0 +1,116 @@
+//This program is a simple test of global and local variables and loops
+
+program Test {
+
+    const int limit := 10;
+
+  void Main() {
+    //Lab 5
+    /*string value;
+    value := "Hello";
+    write value;*/
+
+    
+    //try to change const
+    //limit := 19;
+
+    int x;
+    var x := 100;
+    write var x;
+
+    int a;
+    var a := 10;
+    write var a;
+
+    int b;
+    var b := 2;
+
+    int c;
+    var c := 3;
+
+    int i;
+    var i := 4;
+
+    if(var x != var i){
+      write 1;
+    }
+
+    if(var x >= var i){
+      write 2;
+    }
+
+    if(var i <= var x){
+      write 3;
+    }
+
+    //Lab 6
+    int y;
+
+    var x := 20;
+    var y := 30;
+
+    var i:= var x < var y ? var x+1 : var y-1;
+
+    write var i;
+
+    var i := 0;
+    for (var i:= 0; var i := var i+1; var i <= var limit;) 
+    do{ write 10;  }
+
+    //Lab 7 
+    while(var i != 5 ){
+        write 9;
+        var i := var i +1;    
+    }
+    
+    D1 int x := new int[9];
+    arrayD1 x[1] := 5;
+    write arrayD1 x[1]; 
+
+    int ab;
+    var ab := 20;
+    write var ab;
+
+    var ab := arrayD1 x[1] + 5;
+
+    D2 int w := new int [2][2];
+
+    record date{
+        const int l := 2;
+        int num;
+        D1 int z := new int[2];
+        D2 int z1 := new int[2][2];       
+    };
+
+    rec_var date.num := 20;
+    rec_arrayD1 date.z[0] := 19;
+    rec_arrayD2 date.z1[0][0] := 21;
+
+    int k;
+    var k := rec_arrayD1 date.z[0];
+    var k := rec_arrayD2 date.z1[0][0];
+    
+    //error -> rec_const date.l := 2; //becuase it's a const
+
+    write rec_arrayD1 date.z[0];
+
+
+    switch (100){
+        case 100:1: write 1;
+                    break;
+        case 100:2: write 2;
+                    break;
+        case 100:100: write 100;
+                    break;
+        default: arrayD1 x[0] := 13;
+                 write 900;
+                 break;
+    }
+  }
+
+  void pro(){
+    int w;
+    var w := 68;
+    write var w;
+  }
+}
